@@ -9,3 +9,13 @@ build:
   publish_wap: true
 
 test: off
+
+deploy:
+  provider: FTP
+  protocol: ftp
+  host: waws-prod-bay-003.ftp.azurewebsites.windows.net
+  beta: true
+  folder: /Test-$(appveyor_build_version)
+  username: ftp-test\$ftp-test
+  password:
+    secure: rXrlAkNm0hNNQeUWN1bHWFKgqi5GLvQo0YJbithkG3/smINhmDF07ePn9I3FAbFeQotlOpT9jMA5b0/HiRAntA==
