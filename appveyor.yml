@@ -1,0 +1,10 @@
+configuration: release
+
+before_build:
+- nuget restore
+
+build:
+  parallel: true
+  verbosity: minimal
+
+test: off
